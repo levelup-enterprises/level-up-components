@@ -6,7 +6,7 @@ export interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-export function Section({ className, ...rest }: SectionProps) {
+export function Section({ children, className, ...rest }: SectionProps) {
   const mergedClassName = twMerge('', className);
 
   return (
