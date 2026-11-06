@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge';
+import React, { ReactNode } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 const gridCols = {
   1: 'grid-cols-1',
@@ -17,12 +17,12 @@ const gridCols = {
 };
 
 export interface GridProps extends React.HTMLAttributes<HTMLDivElement> {
-  col?: number;
+  col?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   direction?: 'row' | 'col';
   children: ReactNode;
 }
 
-export function Grid({ col, direction, className, ...rest }: GridProps) {
+export function Grid({ children, col, direction, className, ...rest }: GridProps) {
   const mergedClassName = twMerge(
     'grid grid-flow-row gap-2',
     col && gridCols[col],

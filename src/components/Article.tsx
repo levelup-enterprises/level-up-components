@@ -6,7 +6,7 @@ export interface ArticleProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 
-export function Article({ className, ...rest }: ArticleProps) {
+export function Article({ children, className, ...rest }: ArticleProps) {
   const mergedClassName = twMerge('', className);
 
   return (
